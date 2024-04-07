@@ -1,6 +1,6 @@
 package com.learning.springboot;
 
-public class Pacman {
+public class PacmanGame implements GamingConsole{
     public void up() {
         System.out.println("up");
     }
