@@ -1,4 +1,4 @@
-package com.learning.springboot;
+package com.learning.springboot.game;
 
 public class SuperContraGame implements GamingConsole {
     public void up() {

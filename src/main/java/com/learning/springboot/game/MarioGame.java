@@ -1,4 +1,4 @@
-package com.learning.springboot;
+package com.learning.springboot.game;
 
 public class MarioGame implements GamingConsole{
     public void up() {
