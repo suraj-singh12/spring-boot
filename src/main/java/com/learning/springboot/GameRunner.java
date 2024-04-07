@@ -1,8 +1,8 @@
 package com.learning.springboot;
 
 public class GameRunner {
-    private final MarioGame game;
-    public GameRunner(MarioGame game) {
+    private final Pacman game;
+    public GameRunner(Pacman game) {
         this.game = game;
     }
     public void run() {
