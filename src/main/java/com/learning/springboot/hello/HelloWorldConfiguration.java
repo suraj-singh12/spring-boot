@@ -1,4 +1,4 @@
-package com.learning.springboot;
+package com.learning.springboot.hello;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
