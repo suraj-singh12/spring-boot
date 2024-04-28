@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--    creating a bean with name "name" and constructor injection of value as "Suraj" -->
+    <bean id="name" class="java.lang.String">
+        <constructor-arg value="Suraj" />
+    </bean>
+
+    <bean id="age" class="java.lang.Integer">
+        <constructor-arg value="21" />
+    </bean>
+
+<!--    component scan -->
+<!--    <context:component-scan base-package="com.learning.springboot.game" />-->
+
+<!--    this creates a bean with name "game" and the bean class is as defined below.
+        This is equivalent to placing @Component on this class and putting @ComponentScan in config class -->
+    <bean id="game" class="com.learning.springboot.game.PacmanGame" />
+
+<!--    this creates a bean with name "gameRunner" and injects/autowires the above bean game into its constructor. -->
+    <bean id="gameRunner" class="com.learning.springboot.game.GameRunner">
+        <constructor-arg ref="game" />
+    </bean>
+</beans>
